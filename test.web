@@ -1,0 +1,82 @@
+start() 
+{
+  lang("ro")
+  charset("utf-8")
+  title(Website despre programare)  
+  link("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css")
+  base("http://www.google.ro", "_blank")
+  
+  div(.container) {
+     div(.jumbotron, #container-fluid,  &"ro") {
+        "Despre programarea in HTML, CSS, JavaScript si PHP"
+		br()
+		h1 { "Headline 1" }
+		em { "Website" }
+		br()
+     }
+
+	 div {
+	    h1 { em { "Headline doi" } }
+		a("http://www.google.ro", ~"Search engine") { 
+			"Acasa" 
+			h2 { em { "Headline trei" } }
+			p { "lorem ipsum" }
+		}
+		ol {
+			li { "Unu" }
+			li { "Doi" }
+			li { "Trei" }
+			li { "Patru" }
+			li { "Cinci" }
+		}
+
+		select {
+			optgroup("Swedish Cars") {
+				option("volvo") { Volvo }
+				option("saab") { Saab }
+			}
+    
+			optgroup("German Cars") {
+				option("mercedes") { Mercedes }
+				option("audi") { Audi }
+			}
+		}
+
+		table(3) {
+			caption(Lista cu persoane importante)
+			thead(Nume, Varsta, Avere)
+			tbody {
+				tr(Aladin, 500 ani, 10000)
+				tr(Matusalem, 1000 ani, 10000)
+				tr(JFK presedintele, 50 ani, 10000)
+			}			
+			tfoot(Total persoane, Varsta totala, Total Avere)
+		}
+
+		textarea(4, 35) {
+			"Text de introdus"
+		}
+
+		 form(@"demo_form.asp", get) {
+		    fieldset {
+				legend(Meniu interesant)
+				label("male") { Male }
+				input("radio", "gender", "male", id="male")
+				br()
+				label("female") { Female } 
+				input("radio", "gender", "female", id="female")
+				br()
+				label("other") { Other }
+				input("radio", "gender", "other", id="other")
+				br()
+				br()
+				button("submit", "submit", "Submit") { 
+					"Heloo"
+					p { "Salutare" }
+				}
+				input("submit", "submit", "Submit")
+			}
+		 }
+	 }
+  }  
+}
